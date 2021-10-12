@@ -13,8 +13,6 @@
 
 CATALOG/bin
 CATALOG/obj
-bin
-obj
 packages
 
 # User-specific files (MonoDevelop/Xamarin Studio)
