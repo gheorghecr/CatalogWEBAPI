@@ -5,14 +5,14 @@ using MongoDB.Driver;
 
 namespace Catalog.Repositories
 {
-    public class MondoDbItemsRepository : IItemsRepository
+    public class MongoDbItemsRepository : IItemsRepository
     {   
         private const string databaseName = "catalog";
         private const string collectionName = "items";
 
         private readonly IMongoCollection<Item> itemsCollection;
 
-        public MondoDbItemsRepository(IMongoClient mongoClient)
+        public MongoDbItemsRepository(IMongoClient mongoClient)
         {
             IMongoDatabase database = mongoClient.GetDatabase(databaseName);
             itemsCollection = database.GetCollection<Item>(collectionName);
